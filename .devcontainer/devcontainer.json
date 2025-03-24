@@ -1,0 +1,8 @@
+{
+    "name": "AWS CLI Codespace",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {}
+    },
+    "postCreateCommand": "/bin/bash .devcontainer/install-aws-cli.sh"
+  }
