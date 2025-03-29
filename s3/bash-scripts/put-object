@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Where to store the files
+OUTPUT_DIR="temp/s3-bash-scripts"
+
+# Create the output folder
+mkdir -p "$OUTPUT_DIR"
+
+# Generate a random number of files between 5 and 10
+NUM_FILES=$((RANDOM % 6 + 5))
+
+# Create random files with material content
+for ((i = 1; i <= NUM_FILES; i++)); do
+    FILE_NAME="Material${i}.txt"
+    echo "This is Material file number $i" > "$OUTPUT_DIR/$FILE_NAME"
+    echo "Created file: $FILE_NAME"
+done
+
+

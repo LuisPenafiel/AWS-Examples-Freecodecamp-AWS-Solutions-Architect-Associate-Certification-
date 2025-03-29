@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Print a message indicating the delete of the bucket creation process
+echo "== delete bucket"
+
+# Check if a bucket name is provided as an argument
+if [ -z "$1" ]; then
+    # If no bucket name is provided, display an error message
+    echo "You need to provide a bucket name. Example: ./bucket my-bucket-name"
+    exit 1  # Exit the script with an error code (1)
+fi
+
+# Store the bucket name in a variable
+BUCKET_NAME=$1
+
+# AWS CLI command to delete a bucket
+# Documentation: https://docs.aws.amazon.com/cli/latest/reference/s3api/delete-bucket.html
+aws s3api delete-bucket \
+    --bucket "$BUCKET_NAME" \
+    --region eu-central-1  # Specify the region where the bucket is located
