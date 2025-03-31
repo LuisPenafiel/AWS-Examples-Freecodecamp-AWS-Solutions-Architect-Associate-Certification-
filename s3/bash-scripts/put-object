@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-# Where to store the files
+# Exit immediately if a command returns a non-zero status
+set -e
+
+# Define the output folder
 OUTPUT_DIR="temp/s3-bash-scripts"
+
+# Remove folder if it already exists (force to avoid errors)
+rm -rf "$OUTPUT_DIR"
 
 # Create the output folder
 mkdir -p "$OUTPUT_DIR"
@@ -9,11 +15,14 @@ mkdir -p "$OUTPUT_DIR"
 # Generate a random number of files between 5 and 10
 NUM_FILES=$((RANDOM % 6 + 5))
 
-# Create random files with material content
+# Create random files with random data using dd
 for ((i = 1; i <= NUM_FILES; i++)); do
-    FILE_NAME="Material${i}.txt"
-    echo "This is Material file number $i" > "$OUTPUT_DIR/$FILE_NAME"
-    echo "Created file: $FILE_NAME"
+    FILE_NAME="file${i}.txt"  # Using .txt extension, but contains binary data
+    FILE_PATH="$OUTPUT_DIR/$FILE_NAME"
+    # Generate random data (between 1KB and 1MB)
+    SIZE=$((RANDOM % 1024 + 1))
+    dd if=/dev/urandom of="$FILE_PATH" bs=1024 count="$SIZE" 2>/dev/null
+    echo "Created file: $FILE_NAME (size: $SIZE KB)"
 done
 
-
+tree "$OUTPUT_DIR"
