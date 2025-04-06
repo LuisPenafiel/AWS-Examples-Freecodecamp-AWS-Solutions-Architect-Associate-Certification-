@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Exit immediately if a command returns a non-zero status
+set -e
+
+# Print a message indicating the start of the bucket deletion process
+echo "== delete-objects"
+
+# Check if a bucket name is provided as an argument
+if [ -z "$1" ]; then
+    echo "You need to provide a bucket name. Example: ./delete-objects my-bucket-name"
+    exit 1
+fi
+
+BUCKET_NAME="$1"
+
+# List objects in the bucket and extract their keys
+OBJECTS=$(aws s3api list-objects-v2 \
+    --bucket "$BUCKET_NAME" \
+    --region eu-central-1 \
+    --query "Contents[].Key" \
+    --output json)
+
+# Check if there are objects to delete
+if [ -z "$OBJECTS" ] || [ "$OBJECTS" = "[]" ]; then
+    echo "No objects found in bucket $BUCKET_NAME."
+    exit 0
+fi
+
+# Convert the list of keys into the format required by delete-objects
+# Example: '{"Objects":[{"Key":"file1.txt"},{"Key":"file2.txt"}]}'
+DELETE_JSON=$(echo "$OBJECTS" | jq -c '{Objects: [.[] | {Key: .}]}')
+
+# Delete the objects
+aws s3api delete-objects \
+    --bucket "$BUCKET_NAME" \
+    --region eu-central-1 \
+    --delete "$DELETE_JSON"

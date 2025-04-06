@@ -3,26 +3,33 @@
 # Exit immediately if a command returns a non-zero status
 set -e
 
-# Define the output folder
-OUTPUT_DIR="temp/s3-bash-scripts"
+echo "== put-object"
 
-# Remove folder if it already exists (force to avoid errors)
-rm -rf "$OUTPUT_DIR"
+# Check if a bucket name is provided as an argument
+if [ -z "$1" ]; then
+    echo "You need to provide a bucket name. Example: ./put-object my-bucket-name my-file.txt"
+    exit 1
+fi
 
-# Create the output folder
-mkdir -p "$OUTPUT_DIR"
+# Check if a file path is provided
+if [ -z "$2" ]; then
+    echo "You need to provide a file path to upload. Example: ./put-object my-bucket-name my-file.txt"
+    exit 1
+fi
 
-# Generate a random number of files between 5 and 10
-NUM_FILES=$((RANDOM % 6 + 5))
+BUCKET_NAME="$1"
+FILE_PATH="$2"
 
-# Create random files with random data using dd
-for ((i = 1; i <= NUM_FILES; i++)); do
-    FILE_NAME="file${i}.txt"  # Using .txt extension, but contains binary data
-    FILE_PATH="$OUTPUT_DIR/$FILE_NAME"
-    # Generate random data (between 1KB and 1MB)
-    SIZE=$((RANDOM % 1024 + 1))
-    dd if=/dev/urandom of="$FILE_PATH" bs=1024 count="$SIZE" 2>/dev/null
-    echo "Created file: $FILE_NAME (size: $SIZE KB)"
-done
+# Check if the file exists
+if [ ! -f "$FILE_PATH" ]; then
+    echo "File $FILE_PATH does not exist."
+    exit 1
+fi
 
-tree "$OUTPUT_DIR"
+# Extract the filename from the file path for the S3 key
+FILE_NAME=$(basename "$FILE_PATH")
+
+aws s3api put-object \
+    --bucket "$BUCKET_NAME" \
+    --key "$FILE_NAME" \
+    --body "$FILE_PATH"
