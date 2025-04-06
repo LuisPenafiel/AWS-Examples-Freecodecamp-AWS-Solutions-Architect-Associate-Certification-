@@ -1,14 +1,3 @@
-#!/usr/bin/env bash
-
-# Print a message indicating the start of the bucket creation process
-echo "== create bucket"
-
-# Check if a bucket name is provided as an argument
-if [ -z "$1" ]; then
-    # If no bucket name is provided, display an error message
-    echo "You need to provide a bucket name. Example: ./bucket my-bucket-name"
-    exit 1  # Exit the script with an error code (1)
-fi
 
 # Store the bucket name in a variable
 BUCKET_NAME=$1

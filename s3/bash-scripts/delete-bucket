@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Exit immediately if a command returns a non-zero status
+set -e
+
 # Print a message indicating the delete of the bucket creation process
 echo "== delete bucket"
 

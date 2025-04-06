@@ -13,7 +13,7 @@ fi
 # Check if  filename prefix 
 if [ -z "$1" ]; then
     # If no bucket name is provided, display an error message
-    echo "You need to provide a bucket name. Example: ./bucket my-bucket-name"
+    echo "You need to provide a filename prifex. Example: ./bucket my-bucket-name my-filename-prefix"
     exit 1  # Exit the script with an error code (1)
 fi
 BUCKET_NAME=$1

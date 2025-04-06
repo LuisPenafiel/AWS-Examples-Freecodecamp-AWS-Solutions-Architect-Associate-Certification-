@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Exit immediately if a command returns a non-zero status
+set -e
+
 # Print a message indicating the start of the list object process
 echo "== List objects in the bucket"
 
