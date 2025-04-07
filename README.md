@@ -20,3 +20,9 @@ Add delete-objects script and test S3 scripts
 - Tested put-object with /tmp/newfile.txt and confirmed successful upload
 - Tested delete-objects on my-new-shinny-bucket-lp and verified bucket is empty
 - Documented all S3 scripts commands in aws-scripts-commands.txt
+
+### Day 6
+- Created sdk java, ruby
+- Install java & ruby
+- Modify & Tested setup.sh and devcontainer for clarity
+
