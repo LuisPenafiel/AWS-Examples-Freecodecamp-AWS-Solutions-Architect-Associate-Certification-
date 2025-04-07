@@ -4,5 +4,5 @@
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {}
   },
-  "postCreateCommand": "bash -c 'source .devcontainer/.env && /bin/bash .devcontainer/install-aws-cli.sh'"
+  "postCreateCommand": "bash -c 'source .devcontainer/.env && /bin/bash .devcontainer/setup.sh && /bin/bash .devcontainer/install-aws-cli.sh'"
 }
