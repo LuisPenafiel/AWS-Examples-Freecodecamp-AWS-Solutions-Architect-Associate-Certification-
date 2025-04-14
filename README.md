@@ -26,3 +26,14 @@ Add delete-objects script and test S3 scripts
 - Install java & ruby
 - Modify & Tested setup.sh and devcontainer for clarity
 
+### Flu Week
+- bed
+- Vit.C, Vit.D, Zinc, Magnesium, Honey + Salbei
+
+### Day 7
+Set up Ruby SDK and tested S3 operations
+
+-Installed Ruby, Bundler, and configured Gemfile with aws-sdk-s3, pry, nokogiri
+-Tested s3.rb: created buckets, generated UUID files, uploaded to S3, and debugged with binding.pry
+-Documented commands in s3-ruby-commands.txt
+-Never download vendor locally
