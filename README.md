@@ -33,7 +33,16 @@ Add delete-objects script and test S3 scripts
 ### Day 7
 Set up Ruby SDK and tested S3 operations
 
--Installed Ruby, Bundler, and configured Gemfile with aws-sdk-s3, pry, nokogiri
--Tested s3.rb: created buckets, generated UUID files, uploaded to S3, and debugged with binding.pry
--Documented commands in s3-ruby-commands.txt
--Never download vendor locally
+- Installed Ruby, Bundler, and configured Gemfile with aws-sdk-s3, pry, nokogiri
+- Tested s3.rb: created buckets, generated UUID files, uploaded to S3, and debugged with binding.pry
+- Documented commands in s3-ruby-commands.txt
+- Never download vendor locally
+
+### Day 8
+
+Practiced Infrastructure as Code (IaC) with AWS CloudFormation for S3
+
+- Created s3/iac/cfn/ directory with deploy and delete-stack scripts
+- Defined template.yaml to create a simple S3 bucket via CloudFormation
+- Deployed cfn-s3-simple stack in eu-central-1, reviewed and executed changeset
+- Deleted stack and cleaned up resources using delete-stack script
