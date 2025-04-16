@@ -1,1 +1,5 @@
 .devcontainer/.env
+vendor/
+# Terraform files
+.terraform/
+.terraform.lock.hcl
