@@ -1,8 +1,5 @@
 {
-  "name": "AWS CLI Codespace",
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {}
-  },
-  "postCreateCommand": "bash -c 'source .devcontainer/.env && /bin/bash .devcontainer/setup.sh && /bin/bash .devcontainer/install-aws-cli.sh'"
+  "name": "AWS_CLI_CODESPACES",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "bash -c 'source .devcontainer/env && /bin/bash .devcontainer/install-aws-cli.sh && /bin/bash .devcontainer/setup.sh && /bin/bash .devcontainer/install-terraform.sh'"
 }

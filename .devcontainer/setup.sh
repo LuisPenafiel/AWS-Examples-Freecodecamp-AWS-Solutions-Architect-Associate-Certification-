@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Instalar dependencias necesarias para java y ruby
+# Instalar dependencias necesarias para Ruby
 sudo apt update
-sudo apt install -y openjdk-17-jdk ruby-full
+sudo apt install -y ruby-full
 
-# Instalar dependencias necesarias (como unzip) y tree
-sudo apt-get install -y unzip tree
+# Instalar utilidades comunes (equivalente a ghcr.io/devcontainers/common-utils)
+sudo apt-get install -y unzip tree curl git vim nano wget
 
 # Verifica que todo se instaló correctamente
-java --version && ruby --version && tree --version
+ruby --version && tree --version && curl --version && git --version && aws --version
