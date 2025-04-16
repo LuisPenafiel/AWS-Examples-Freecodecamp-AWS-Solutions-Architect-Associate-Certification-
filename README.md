@@ -46,3 +46,14 @@ Practiced Infrastructure as Code (IaC) with AWS CloudFormation for S3
 - Defined template.yaml to create a simple S3 bucket via CloudFormation
 - Deployed cfn-s3-simple stack in eu-central-1, reviewed and executed changeset
 - Deleted stack and cleaned up resources using delete-stack script
+
+### Day 9
+
+Set up Terraform for IaC in devcontainer
+
+- Modified devcontainer.json to install Terraform automatically
+- Installed unzip and downloaded Terraform v1.11.3
+- Added Terraform binary to /usr/local/bin/ for global access
+- Moved AWS credentials to Codespaces Secrets for secure access
+- Removed Ruby project (s3/sdk/ruby/) to resolve Dependabot vulnerabilities in nokogiri
+- Updated setup.sh to remove ruby-full installation

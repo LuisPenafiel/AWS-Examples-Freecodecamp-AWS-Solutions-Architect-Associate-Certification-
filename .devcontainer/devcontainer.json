@@ -1,5 +1,5 @@
 {
   "name": "AWS_CLI_CODESPACES",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "postCreateCommand": "bash -c 'source .devcontainer/env && /bin/bash .devcontainer/install-aws-cli.sh && /bin/bash .devcontainer/setup.sh && /bin/bash .devcontainer/install-terraform.sh'"
+  "postCreateCommand": "/bin/bash .devcontainer/post-create.sh"
 }
