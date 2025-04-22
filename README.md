@@ -57,3 +57,27 @@ Set up Terraform for IaC in devcontainer
 - Moved AWS credentials to Codespaces Secrets for secure access
 - Removed Ruby project (s3/sdk/ruby/) to resolve Dependabot vulnerabilities in nokogiri
 - Updated setup.sh to remove ruby-full installation
+
+### Day 10
+
+Structured Terraform scripts for S3 bucket management
+
+- Created main.tf to define AWS provider and region (eu-central-1)
+- Created s3.tf to define an S3 bucket with a specific name and detailed tags
+- Updated .gitignore to exclude Terraform-generated files and sensitive data (.tfstate, .tfvars, crash logs, etc.)
+- Planned and applied Terraform configuration to create the S3 bucket in AWS
+
+### Pascua
+
+### ### Day 11
+
+Explored Pulumi as an alternative IaC tool
+
+- Installed Pulumi CLI and added it to the $PATH for usage
+- Corrected $PATH setup by using source ~/.bashrc instead of incorrect .bash file
+- Set up a Python project in s3/iac/pulumi/
+- Created a Pulumi script to define an S3 bucket with detailed tags
+- Deployed the S3 bucket using pulumi up
+- Removed the S3 bucket using pulumi destroy
+- Created a second Pulumi project in s3/iac/pulumi-new/ to practice project initialization
+- Verified that no sensitive or heavy files are uploaded to GitHub (using .gitignore)
