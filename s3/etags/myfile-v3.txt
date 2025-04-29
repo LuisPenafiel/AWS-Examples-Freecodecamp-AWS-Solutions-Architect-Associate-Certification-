@@ -1,0 +1,1 @@
+echo "Hi, this a third archive para Etags." > myfile-v3.txt
