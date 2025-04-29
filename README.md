@@ -95,3 +95,11 @@ Practiced ETags with Terraform for S3 object management
 - Fixed ETag mismatch by correcting the content of myfile-v2.txt to match the expected ETag
 - Cleaned up non-managed versions of the object using aws s3api delete-object
 - Removed the S3 bucket and object using terraform destroy
+
+Practiced changing storage class with AWS CLI for S3 object management
+
+- Created a bucket using aws s3 mb command
+- Uploaded a file (hello.txt) with the storage class STANDARD_IA using aws s3 cp
+- Changed the storage class to STANDARD by copying the file with aws s3 cp again
+- Learned that we can talk directly to S3 with commands in the terminal to change where a file is stored
+- Removed the file and bucket using aws s3 rm and aws s3 rb
