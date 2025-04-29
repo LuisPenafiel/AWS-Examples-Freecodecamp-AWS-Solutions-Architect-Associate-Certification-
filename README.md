@@ -69,7 +69,7 @@ Structured Terraform scripts for S3 bucket management
 
 ### Pascua
 
-### ### Day 11
+### Day 11
 
 Explored Pulumi as an alternative IaC tool
 
@@ -81,3 +81,17 @@ Explored Pulumi as an alternative IaC tool
 - Removed the S3 bucket using pulumi destroy
 - Created a second Pulumi project in s3/iac/pulumi-new/ to practice project initialization
 - Verified that no sensitive or heavy files are uploaded to GitHub (using .gitignore)
+
+### Day 12
+
+Practiced ETags with Terraform for S3 object management
+
+- Updated main.tf to create an S3 bucket with versioning enabled
+- Changed bucket name to my-terraform-etag-bucket-luispenafiel-2025-v2 to avoid conflicts
+- Uploaded an object (myfile.txt) and used ETags to verify integrity
+- Modified the object and observed the ETag change with Terraform
+- Added conditional ETag checks to manage multiple versions of the object
+- Corrected errors by removing obsolete resource from state and updating ETag condition
+- Fixed ETag mismatch by correcting the content of myfile-v2.txt to match the expected ETag
+- Cleaned up non-managed versions of the object using aws s3api delete-object
+- Removed the S3 bucket and object using terraform destroy
