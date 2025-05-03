@@ -103,3 +103,16 @@ Practiced changing storage class with AWS CLI for S3 object management
 - Changed the storage class to STANDARD by copying the file with aws s3 cp again
 - Learned that we can talk directly to S3 with commands in the terminal to change where a file is stored
 - Removed the file and bucket using aws s3 rm and aws s3 rb
+
+### Day 13
+
+Practiced checksums with SHA-1 using Terraform for S3 object management
+
+- Created a new bucket with Terraform in s3/checksum-sha1/
+- Uploaded a file (example.txt) and calculated its SHA-1 checksum to verify it didn't change
+- Fixed an error by changing filebase64sha1 to base64encode(filesha1()) in Terraform
+- Fixed another error by removing checksum_sha1 configuration, letting S3 calculate it automatically
+- Compared the local SHA-1 checksum with the one S3 calculated to confirm the file didn't change
+- Modified the file and saw how the SHA-1 checksum changed to show the file was different
+- Learned that checksums like SHA-1 are like "huellas digitales" that check if a file changed, to make sure it arrives exactly the same
+- Removed the bucket and file using terraform destroy

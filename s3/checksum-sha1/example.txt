@@ -1,0 +1,1 @@
+echo "Hola, este es un archivo modificado para probar checksums con SHA-1." 
