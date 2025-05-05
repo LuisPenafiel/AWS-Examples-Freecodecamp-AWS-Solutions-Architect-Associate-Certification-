@@ -116,3 +116,18 @@ Practiced checksums with SHA-1 using Terraform for S3 object management
 - Modified the file and saw how the SHA-1 checksum changed to show the file was different
 - Learned that checksums like SHA-1 are like "huellas digitales" that check if a file changed, to make sure it arrives exactly the same
 - Removed the bucket and file using terraform destroy
+
+### Day 14
+
+Practiced CORS with Terraform for S3 website hosting
+
+- Created two buckets with Terraform in s3/cors-practice/: one for a website (cors-fun-ab-36252-luispenafiel-2025) and one for a JavaScript file (cors-fun2-ab-36252-luispenafiel-2025)
+- Made the buckets into static websites so they can show web pages
+- Added permissions to let everyone see the websites
+- Added CORS rules to the first bucket so it can talk to an API (like asking for information from another website)
+- Added CORS rules to the second bucket so the first bucket can use its JavaScript file (hello.js)
+- Uploaded index.html to the first bucket and hello.js to the second bucket
+- Tested the website and saw that it can load the JavaScript file thanks to CORS
+- Saw two errors in the console: one because the API wasn't available (which is okay), and another from a Cloudflare script that isn't needed for this practice
+- Learned that CORS is like giving permiso para que mi sitio web hable con otra página web, pero solo si es segura
+- Removed the buckets and files using terraform destroy
