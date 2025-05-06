@@ -28,6 +28,9 @@ Esta carpeta tiene scripts de Bash que uso para hablar directamente con S3 desde
 - **put-object**  (ejemplo):
   Este script genera objects.
 
+- **sync**  (ejemplo):
+  Este script genera objects de forma aleartoria y los sube al bucket.
+
 
 ## ¿Para qué usamos esta carpeta?
 La usamos para practicar cómo hablar con S3 desde la terminal, sin usar herramientas más grandes como Terraform o Pulumi. Es una forma rápida de hacer cosas simples, como crear un bucket o subir un archivo.
