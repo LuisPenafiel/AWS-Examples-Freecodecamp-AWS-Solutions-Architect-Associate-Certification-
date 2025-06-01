@@ -131,3 +131,14 @@ Practiced CORS with Terraform for S3 website hosting
 - Saw two errors in the console: one because the API wasn't available (which is okay), and another from a Cloudflare script that isn't needed for this practice
 - Learned that CORS is like giving permiso para que mi sitio web hable con otra página web, pero solo si es segura
 - Removed the buckets and files using terraform destroy
+
+### Day 15
+
+Practiced encryption in S3 using Terraform and AWS CLI
+
+- Created a bucket with Terraform in s3/encryption-practice/ (encryption-fun-ab-135-luispenafiel-2025)
+- Uploaded a file (hello.txt) with SSE-S3 (a simple lock) and SSE-KMS (a lock with a special key) using Terraform
+- Tried to use SSE-C (a lock with my own key) in Terraform, but it wasn't supported, so used AWS CLI instead
+- Uploaded the file with SSE-C using AWS CLI and fixed a problem with checking the file by calculating the correct MD5 for the key
+- Learned that encryption is like putting a lock on my files in S3 to keep them safe, and there are different ways to do it depending on who manages the key
+- Removed the bucket and files using terraform destroy and AWS CLI commands
