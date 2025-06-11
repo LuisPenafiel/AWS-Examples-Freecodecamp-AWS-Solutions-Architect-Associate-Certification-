@@ -30,6 +30,7 @@ override.tf.json
 
 # Terraform lock file (already included, but let's be explicit)
 .terraform.lock.hcl
+*.tfplan
 
 # Pulumi state files
 Pulumi.*.yaml
