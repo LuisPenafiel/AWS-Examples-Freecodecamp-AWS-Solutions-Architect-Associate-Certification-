@@ -142,3 +142,13 @@ Practiced encryption in S3 using Terraform and AWS CLI
 - Uploaded the file with SSE-C using AWS CLI and fixed a problem with checking the file by calculating the correct MD5 for the key
 - Learned that encryption is like putting a lock on my files in S3 to keep them safe, and there are different ways to do it depending on who manages the key
 - Removed the bucket and files using terraform destroy and AWS CLI commands
+
+### 3 Weeks Terraform focus(certification)
+
+Day 1 - 12  June 2025
+
+- Practiced creating an S3 bucket with a policy restricting access to a specific IP using Terraform modules
+- Set up a modular structure with a central provider and backend configuration
+- Created the bucket successfully and verified the policy with my IP
+- Learned that modules help organize and reuse Terraform code effectively
+- Removed the bucket using terraform destroy

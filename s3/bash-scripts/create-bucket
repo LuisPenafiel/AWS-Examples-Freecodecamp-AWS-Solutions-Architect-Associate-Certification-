@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 # Store the bucket name in a variable
 BUCKET_NAME=$1
