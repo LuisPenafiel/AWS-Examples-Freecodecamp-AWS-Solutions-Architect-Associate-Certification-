@@ -143,12 +143,20 @@ Practiced encryption in S3 using Terraform and AWS CLI
 - Learned that encryption is like putting a lock on my files in S3 to keep them safe, and there are different ways to do it depending on who manages the key
 - Removed the bucket and files using terraform destroy and AWS CLI commands
 
-### 3 Weeks Terraform focus(certification)
+### 3 Weeks Terraform-practices(certification)
 
 Day 1 - 12  June 2025
 
+ Day01
 - Practiced creating an S3 bucket with a policy restricting access to a specific IP using Terraform modules
 - Set up a modular structure with a central provider and backend configuration
 - Created the bucket successfully and verified the policy with my IP
 - Learned that modules help organize and reuse Terraform code effectively
 - Removed the bucket using terraform destroy
+
+ Day02
+- Practiced creating an EC2 instance with a web server (Apache) using Terraform modules
+- Configured the instance with user_data to install Apache and display a custom webpage
+- Successfully launched the instance and accessed the webpage after opening port 80 in the security group
+- Learned how to automate server setup with user_data in EC2 and manage security group rules
+- Removed the instance using terraform destroy
