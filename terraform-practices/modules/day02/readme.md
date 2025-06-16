@@ -32,7 +32,6 @@ module "day02" {
 }
 ```
 
-
 ## Ejecución de Comandos
 Desde el directorio raíz, ejecuta:
 
