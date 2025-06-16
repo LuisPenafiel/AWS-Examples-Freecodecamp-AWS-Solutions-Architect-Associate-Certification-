@@ -160,3 +160,18 @@ Day 1 - 12  June 2025
 - Successfully launched the instance and accessed the webpage after opening port 80 in the security group
 - Learned how to automate server setup with user_data in EC2 and manage security group rules
 - Removed the instance using terraform destroy
+
+Day03 
+- Practiced implementing outputs and local values with a VPC
+- Created a VPC and subnet using local values for naming and outputs for IDs
+- Successfully deployed and verified the VPC configuration, fixing an AMI issue for day02
+- Learned how to use outputs for visibility and local values for internal logic
+- Removed the VPC using terraform destroy
+
+Day 04 
+
+- Practiced creating a VPC with public and private subnets using advanced variables
+- Configured a VPC with multiple subnets and verified their creation
+- Successfully deployed and checked the subnet IDs via outputs
+- Learned how to use advanced variables for network customization
+- Removed the VPC using terraform destroy
