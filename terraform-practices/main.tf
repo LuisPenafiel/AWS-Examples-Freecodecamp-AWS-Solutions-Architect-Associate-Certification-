@@ -8,7 +8,7 @@ module "day01" {
 module "day02" {
   source        = "./modules/day02"
   instance_type = "t2.micro"
-  ami           = "ami-00ac244ee0ad9050d "
+  ami           = "ami-0c55b159cbfafe1f0"
   count         = terraform.workspace == "day02" ? 1 : 0
 }
 
@@ -26,4 +26,15 @@ module "day04" {
   public_subnets   = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnets  = ["10.0.3.0/24", "10.0.4.0/24"]
   count            = terraform.workspace == "day04" ? 1 : 0
+}
+
+module "day05" {
+  source           = "./modules/day05"
+  db_instance_class = "db.t2.micro"
+  db_engine        = "mysql"
+  db_name          = "mydb"
+  db_username      = "admin"
+  db_password      = "Tontodelculo123_"
+  count            = terraform.workspace == "day05" ? 1 : 0
+  engine_version   = "5.6.51"  # Añade esta línea
 }
