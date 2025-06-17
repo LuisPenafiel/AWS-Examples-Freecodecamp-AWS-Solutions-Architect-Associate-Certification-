@@ -1,19 +1,13 @@
 variable "db_instance_class" {
   description = "Clase de la instancia RDS"
   type        = string
-  default     = "db.t2.micro"
+  default     = "db.t3.micro"
 }
 
 variable "db_engine" {
   description = "Motor de la base de datos"
   type        = string
   default     = "mysql"
-}
-
-variable "engine_version" {
-  description = "Versión del motor de la base de datos"
-  type        = string
-  default     = "5.6.51"
 }
 
 variable "db_name" {
@@ -31,5 +25,18 @@ variable "db_username" {
 variable "db_password" {
   description = "Contraseña de la base de datos"
   type        = string
-  default     = "Tontodelculo123_"  # password
+  sensitive   = true  # Esto oculta la contraseña en los outputs
+  default     = null  # Sin valor por defecto para forzarla como variable de entorno
+}
+
+variable "engine_version" {
+  description = "Versión del motor de la base de datos"
+  type        = string
+  default     = "5.7.44"
+}
+
+variable "allowed_ip" {
+  description = "IP permitida para acceder al RDS"
+  type        = string
+  default     = null  # Sin valor por defecto para forzarla como variable de entorno
 }

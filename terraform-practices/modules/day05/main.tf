@@ -14,7 +14,7 @@ data "aws_subnets" "available" {
 
 resource "aws_db_instance" "my_rds" {
   engine            = var.db_engine
-  engine_version    = "5.6.51"  # Especifica una versión compatible
+  engine_version    = "5.7.44"
   instance_class    = var.db_instance_class
   allocated_storage = 20
   db_name           = var.db_name
@@ -34,7 +34,7 @@ resource "aws_security_group" "rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["2.206.152.175/32"]
+    cidr_blocks = var.allowed_ip != null ? [var.allowed_ip] : [""0.0.0.0/0""]  # Usa IP si está definida
   }
 }
 

@@ -30,11 +30,10 @@ module "day04" {
 
 module "day05" {
   source           = "./modules/day05"
-  db_instance_class = "db.t2.micro"
+  db_instance_class = "db.t3.micro"
   db_engine        = "mysql"
   db_name          = "mydb"
   db_username      = "admin"
-  db_password      = "Tontodelculo123_"
   count            = terraform.workspace == "day05" ? 1 : 0
-  engine_version   = "5.6.51"  # Añade esta línea
+  engine_version   = "5.7.44"
 }

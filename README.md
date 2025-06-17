@@ -147,21 +147,21 @@ Practiced encryption in S3 using Terraform and AWS CLI
 
 Day 1 - 12  June 2025
 
- Day01
+ Day 01
 - Practiced creating an S3 bucket with a policy restricting access to a specific IP using Terraform modules
 - Set up a modular structure with a central provider and backend configuration
 - Created the bucket successfully and verified the policy with my IP
 - Learned that modules help organize and reuse Terraform code effectively
 - Removed the bucket using terraform destroy
 
- Day02
+ Day 02
 - Practiced creating an EC2 instance with a web server (Apache) using Terraform modules
 - Configured the instance with user_data to install Apache and display a custom webpage
 - Successfully launched the instance and accessed the webpage after opening port 80 in the security group
 - Learned how to automate server setup with user_data in EC2 and manage security group rules
 - Removed the instance using terraform destroy
 
-Day03 
+Day 03 
 - Practiced implementing outputs and local values with a VPC
 - Created a VPC and subnet using local values for naming and outputs for IDs
 - Successfully deployed and verified the VPC configuration, fixing an AMI issue for day02
@@ -175,3 +175,11 @@ Day 04
 - Successfully deployed and checked the subnet IDs via outputs
 - Learned how to use advanced variables for network customization
 - Removed the VPC using terraform destroy
+
+Day 05 
+
+- Practiced deploying an RDS database with data sources
+- Created an RDS instance within the VPC from day03 using data sources, overcoming AZ and version compatibility issues
+- Successfully deployed after adding a second subnet and adjusting to db.t3.micro with MySQL 5.7.44
+- Learned how to use data sources, handle multi-AZ requirements, and troubleshoot RDS configuration
+- Removed the RDS using terraform destroy
