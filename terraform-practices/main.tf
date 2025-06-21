@@ -37,3 +37,8 @@ module "day05" {
   count            = terraform.workspace == "day05" ? 1 : 0
   engine_version   = "5.7.44"
 }
+
+module "day06" {
+  source          = "./modules/day06"
+  count           = terraform.workspace == "day06" ? 1 : 0
+}
