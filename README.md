@@ -183,3 +183,11 @@ Day 05
 - Successfully deployed after adding a second subnet and adjusting to db.t3.micro with MySQL 5.7.44
 - Learned how to use data sources, handle multi-AZ requirements, and troubleshoot RDS configuration
 - Removed the RDS using terraform destroy
+
+Day 6 - June 21, 2025
+
+- Practiced developing and utilizing reusable Terraform modules
+- Created a reusable network module and deployed a VPC named adventure-park-vpc with public and private subnets using the day06 module
+- Successfully deployed and verified the network configuration in the AWS Management Console
+- Learned key concepts of module reusability, variable parameterization, and output usage
+- Removed all resources using terraform destroy to avoid AWS costs
