@@ -42,3 +42,8 @@ module "day06" {
   source          = "./modules/day06"
   count           = terraform.workspace == "day06" ? 1 : 0
 }
+
+module "day07" {
+  source          = "./modules/day07"
+  count           = terraform.workspace == "day07" ? 1 : 0
+}

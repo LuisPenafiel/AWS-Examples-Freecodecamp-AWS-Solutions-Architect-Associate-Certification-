@@ -50,6 +50,7 @@ module "day06" {
 }
 ```
 
+
 ## ⚙️ Ejecución de Comandos
 Desde el directorio raíz del proyecto, ejecuta:
 
