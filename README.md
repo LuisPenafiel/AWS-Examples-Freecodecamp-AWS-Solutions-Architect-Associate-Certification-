@@ -191,3 +191,12 @@ Day 6 - June 21, 2025
 - Successfully deployed and verified the network configuration in the AWS Management Console
 - Learned key concepts of module reusability, variable parameterization, and output usage
 - Removed all resources using terraform destroy to avoid AWS costs
+
+     --------------------------------------------------------------------------
+
+### Terraform Cloud Exploration - June 24, 2025
+- Practiced setting up Terraform Cloud as a remote backend
+- Configured a CLI-driven workspace (`terraform-cloud-tools`) in the organization `luis-terraform-learning`
+- Successfully initialized the remote backend and applied a `null_resource` for testing
+- Learned about remote state management, authentication with tokens, and CLI tools (validate, console)
+- Removed the test resource using `terraform destroy` to maintain a cost-free environment
