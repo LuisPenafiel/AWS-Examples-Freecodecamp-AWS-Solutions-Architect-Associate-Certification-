@@ -28,3 +28,5 @@ resource "null_resource" "example" {
 output "saludo" {
   value = "Mensaje: ${var.mensaje}, Secreto: ${var.secreto}"
 }
+
+#prueba 2
