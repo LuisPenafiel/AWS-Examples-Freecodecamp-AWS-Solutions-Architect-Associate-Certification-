@@ -13,3 +13,5 @@ resource "null_resource" "example" {
     value = "Testing GitHub Integration"
   }
 }
+
+#Prueba que funcione
