@@ -13,14 +13,18 @@ variable "mensaje" {
   default = "Mensaje por defecto"
 }
 
+variable "secreto" {
+  type      = string
+  sensitive = true
+}
+
 resource "null_resource" "example" {
   triggers = {
-    value = var.mensaje
+    value  = var.mensaje
+    secret = var.secreto
   }
 }
 
 output "saludo" {
-  value = "Mensaje: ${var.mensaje}"
+  value = "Mensaje: ${var.mensaje}, Secreto: ${var.secreto}"
 }
-
-#prueba despues errror
