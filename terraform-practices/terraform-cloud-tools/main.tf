@@ -10,8 +10,6 @@ terraform {
 
 resource "null_resource" "example" {
   triggers = {
-    value = "Fixed GitHub Integration Test"
+    value = "Testing GitHub Trigger Fix - Attempt 3"
   }
 }
-
-#Prueba que funcione3
