@@ -13,3 +13,5 @@ resource "null_resource" "example" {
     value = "Testing GitHub Trigger Fix - Attempt 3"
   }
 }
+
+#pruebas
