@@ -204,5 +204,7 @@ Day 6 - June 21, 2025
 ### Terraform Cloud Exploration - June 25, 2025
 - Practiced setting up Terraform Cloud as a remote backend
 - Configured a CLI-driven workspace (`terraform-cloud-tools`) in the organization `luis-terraform-learning`
-- Successfully initialized the remote backend, applied a `null_resource`, and integrated with GitHub using Terraform Working Directory `terraform-practices/terraform-cloud-tools`
-- Learned about remote state management, authentication with tokens, CLI tools (validate, console), and GitHub automation
+- Successfully initialized the remote backend, applied a `null_resource`, integrated with GitHub using Terraform Working Directory `terraform-practices/terraform-cloud-tools`, and managed variables (`TF_VAR_mensaje`) and secrets (`TF_VAR_secreto`)
+- Learned about remote state management, authentication with tokens, CLI tools (validate, console), GitHub automation, and handling sensitive data
+- Resolved issues with undeclared variables and sensitive outputs, removing test resources with `terraform destroy` to maintain a cost-free environment
+
