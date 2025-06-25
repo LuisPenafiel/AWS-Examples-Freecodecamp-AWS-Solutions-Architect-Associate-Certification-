@@ -200,3 +200,9 @@ Day 6 - June 21, 2025
 - Successfully initialized the remote backend and applied a `null_resource` for testing
 - Learned about remote state management, authentication with tokens, and CLI tools (validate, console)
 - Removed the test resource using `terraform destroy` to maintain a cost-free environment
+
+### Terraform Cloud Exploration - June 25, 2025
+- Practiced setting up Terraform Cloud as a remote backend
+- Configured a CLI-driven workspace (`terraform-cloud-tools`) in the organization `luis-terraform-learning`
+- Successfully initialized the remote backend, applied a `null_resource`, and integrated with GitHub using Terraform Working Directory `terraform-practices/terraform-cloud-tools`
+- Learned about remote state management, authentication with tokens, CLI tools (validate, console), and GitHub automation
