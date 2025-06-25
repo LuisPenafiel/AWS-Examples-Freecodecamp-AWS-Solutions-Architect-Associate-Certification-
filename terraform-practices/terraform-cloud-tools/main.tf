@@ -8,13 +8,13 @@ terraform {
   }
 }
 
-variable "mensaje" {
+variable "TF_VAR_mensaje" {
   type    = string
   default = "Mensaje por defecto"
   description = "Un mensaje personalizado para la salida"
 }
 
-variable "secreto" {
+variable "TF_VAR_secreto" {
   type      = string
   sensitive = true
   description = "Un secreto sensible para pruebas"
@@ -22,12 +22,12 @@ variable "secreto" {
 
 resource "null_resource" "example" {
   triggers = {
-    value  = var.mensaje
-    secret = var.secreto
+    value  = var.TF_VAR_mensaje
+    secret = var.TF_VAR_secreto
   }
 }
 
 output "saludo" {
-  value    = "Mensaje: ${var.mensaje}, Secreto: ${var.secreto}"
+  value    = "Mensaje: ${var.TF_VAR_mensaje}, Secreto: ${var.TF_VAR_secreto}"
   sensitive = true
 }
