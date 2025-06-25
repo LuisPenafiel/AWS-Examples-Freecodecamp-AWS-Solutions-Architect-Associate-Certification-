@@ -11,11 +11,13 @@ terraform {
 variable "mensaje" {
   type    = string
   default = "Mensaje por defecto"
+  description = "Un mensaje personalizado para la salida"
 }
 
 variable "secreto" {
   type      = string
   sensitive = true
+  description = "Un secreto sensible para pruebas"
 }
 
 resource "null_resource" "example" {
@@ -26,7 +28,6 @@ resource "null_resource" "example" {
 }
 
 output "saludo" {
-  value = "Mensaje: ${var.mensaje}, Secreto: ${var.secreto}"
+  value    = "Mensaje: ${var.mensaje}, Secreto: ${var.secreto}"
+  sensitive = true
 }
-
-#prueba 2
