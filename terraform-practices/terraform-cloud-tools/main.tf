@@ -8,8 +8,17 @@ terraform {
   }
 }
 
+variable "mensaje" {
+  type    = string
+  default = "Mensaje por defecto"
+}
+
 resource "null_resource" "example" {
   triggers = {
-    value = "Testing Remote Workspace Fix - Attempt 1"
+    value = var.mensaje
   }
+}
+
+output "saludo" {
+  value = "Mensaje: ${var.mensaje}"
 }
