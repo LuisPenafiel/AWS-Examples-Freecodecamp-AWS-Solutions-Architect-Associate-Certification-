@@ -22,3 +22,5 @@ resource "null_resource" "example" {
 output "saludo" {
   value = "Mensaje: ${var.mensaje}"
 }
+
+#prueba despues errror
