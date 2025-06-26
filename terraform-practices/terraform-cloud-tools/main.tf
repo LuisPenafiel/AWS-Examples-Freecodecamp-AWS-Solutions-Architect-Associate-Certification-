@@ -24,7 +24,7 @@ resource "null_resource" "example" {
   triggers = {
     value  = var.TF_VAR_mensaje
     secret = var.TF_VAR_secreto
-    environment = "test"
+    
   }
 }
 output "saludo" {
