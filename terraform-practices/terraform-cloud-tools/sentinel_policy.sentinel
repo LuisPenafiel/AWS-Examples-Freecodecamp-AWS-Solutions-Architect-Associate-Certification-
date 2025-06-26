@@ -1,0 +1,11 @@
+# Política ficticia: Asegura que todos los recursos tengan una etiqueta
+allResources = json.unmarshal(file("tfplan.json")).resource_changes
+
+# Verifica que cada recurso tenga una etiqueta "environment"
+hasEnvironmentTag = allResources.all(r) {
+  r.change.after.tags != null &&
+  r.change.after.tags.environment != null
+}
+
+# Si no cumple, falla
+main = rule { hasEnvironmentTag }
