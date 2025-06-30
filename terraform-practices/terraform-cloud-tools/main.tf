@@ -57,3 +57,5 @@ output "saludo" {
 output "hybrid_infrastructure" {
   value = "Local: ${module.local.local_server_name}, Cloud: ${module.cloud.cloud_server_name}"
 }
+
+#prueba 1
