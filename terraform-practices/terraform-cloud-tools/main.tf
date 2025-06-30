@@ -50,7 +50,7 @@ resource "null_resource" "example" {
 }
 
 output "saludo" {
-  value    = "Mensaje: ${var.TF_VAR_mensaje}, Secreto: ${var.TF_VAR_secreto}"
+  value    = "Mensaje: ${var.mensaje}, Secreto: ${var.secreto}"
   sensitive = true
 }
 
