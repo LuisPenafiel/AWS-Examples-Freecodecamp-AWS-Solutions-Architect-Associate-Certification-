@@ -202,14 +202,10 @@ Day 6 - June 21, 2025
 - Removed the test resource using `terraform destroy` to maintain a cost-free environment
 
 ### Terraform Cloud Exploration - June 25-01 July, 2025
+### Terraform Cloud Exploration - June 30, 2025
 - Practiced setting up Terraform Cloud as a remote backend
-- Configured a CLI-driven workspace (`terraform-cloud-tools`) in the organization `luis-terraform-learning`
-- Successfully initialized the remote backend, applied a `null_resource`, integrated with GitHub using Terraform Working Directory `terraform-practices/terraform-cloud-tools`, and managed variables (`TF_VAR_mensaje`) and secrets (`TF_VAR_secreto`)
-- Learned about remote state management, authentication with tokens, CLI tools (validate, console), GitHub automation, and handling sensitive data
-- Resolved issues with undeclared variables and sensitive outputs, removing test resources with `terraform destroy` to maintain a cost-free environment
-
-- Practiced setting up Terraform Cloud as a remote backend
-- Configured a CLI-driven workspace (`terraform-cloud-tools`) in the organization `luis-terraform-learning`
-- Successfully initialized the remote backend, integrated with GitHub using Terraform Working Directory `terraform-practices/terraform-cloud-tools`, managed variables (`TF_VAR_mensaje`) and secrets (`TF_VAR_secreto`), explored remote state management, and studied Sentinel policies theoretically
-- Learned about remote state versioning, authentication with tokens, CLI tools (validate, console, state), GitHub automation, handling sensitive data, and security policy concepts
+- Configured a CLI-driven workspace (`terraform-cloud-tools`) en la organización `luis-terraform-learning`
+- Successfully initialized the remote backend, integrated with GitHub using Terraform Working Directory `terraform-practices/terraform-cloud-tools`, managed variables (`TF_VAR_mensaje`, `TF_VAR_secreto`, `TF_VAR_server_name`, `TF_VAR_cloud_name`), explored remote state management, and simulated a hybrid infrastructure with local and cloud modules
+- Learned about remote state versioning, authentication with tokens, CLI tools (validate, console, state), GitHub automation, handling sensitive data, and security policy concepts with Sentinel (teórico)
 - Resolved issues with undeclared variables, sensitive outputs, and workspace alignment, removing test resources with `terraform destroy` to maintain a cost-free environment
+- Simulated a hybrid infrastructure using local and cloud modules, integrating them into a single project with outputsd issues with undeclared variables, sensitive outputs, and workspace alignment, removing test resources with `terraform destroy` to maintain a cost-free environment
