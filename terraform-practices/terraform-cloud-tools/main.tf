@@ -33,12 +33,12 @@ variable "TF_VAR_cloud_name" {
 }
 
 module "local" {
-  source     = "../modules/local_server"
+  source     = "./modules/local_server"
   server_name = var.TF_VAR_server_name
 }
 
 module "cloud" {
-  source     = "../modules/cloud_server"
+  source     = "./modules/cloud_server"
   cloud_name = var.TF_VAR_cloud_name
 }
 
@@ -50,12 +50,10 @@ resource "null_resource" "example" {
 }
 
 output "saludo" {
-  value    = "Mensaje: ${var.mensaje}, Secreto: ${var.secreto}"
+  value    = "Mensaje: ${var.TF_VAR_mensaje}, Secreto: ${var.TF_VAR_secreto}"
   sensitive = true
 }
 
 output "hybrid_infrastructure" {
   value = "Local: ${module.local.local_server_name}, Cloud: ${module.cloud.cloud_server_name}"
 }
-
-#prueba 2
