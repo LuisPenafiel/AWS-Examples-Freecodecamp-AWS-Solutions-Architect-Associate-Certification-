@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
 resource "aws_vpc" "my_vpc" {
   cidr_block = var.vpc_cidr
   tags = {

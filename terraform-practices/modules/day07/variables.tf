@@ -1,13 +1,13 @@
 variable "instance_type" {
   description = "Tipo de instancia EC2 (como el tamaño de los cocineros)"
   type        = string
-  default     = "t3.micro"  # Dentro del Free Tier
+  default     = "t3.micro"
 }
 
 variable "ami_id" {
   description = "ID de la AMI (receta base para los cocineros)"
   type        = string
-  default     = "ami-000ec6c25978d5999"  # Amazon Linux 2 x86 en eu-central-1
+  default     = "ami-000ec6c25978d5999"
 }
 
 variable "vpc_cidr" {

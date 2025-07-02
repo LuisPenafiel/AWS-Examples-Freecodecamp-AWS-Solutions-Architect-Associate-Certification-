@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
 module "network_adventure" {
   source          = "../network"
   vpc_name        = "adventure-park-vpc"
