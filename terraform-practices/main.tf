@@ -15,8 +15,31 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-central-1"
+  region = "eu-central-1"  # Asegúrate de que la región esté explícitamente definida
 }
+
+# Declaración de variables (para eliminar advertencias)
+variable "TF_VAR_instance_type" {
+  type    = string
+  default = "t3.micro"
+}
+
+variable "TF_VAR_ami_id" {
+  type    = string
+  default = "ami-000ec6c25978d5999"  # Amazon Linux 2 x86
+}
+
+variable "TF_VAR_vpc_cidr" {
+  type    = string
+  default = "10.2.0.0/16"
+}
+
+variable "TF_VAR_public_subnets" {
+  type    = list(string)
+  default = ["10.2.1.0/24", "10.2.2.0/24"]
+}
+
+# Nota: AWS_ACCESS_KEY_ID y AWS_SECRET_ACCESS_KEY se pasan como variables de entorno o secrets en Terraform Cloud
 
 module "day01" {
   source      = "./modules/day01"
